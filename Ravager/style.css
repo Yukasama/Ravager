@@ -8,8 +8,8 @@
     --color-theme: white;
     --color-reverse: black;
 
-    --height-navbar: 75px;
-    --height-navbar-scroll: 70px;
+    --height-navbar: 90px;
+    --height-navbar-scroll: 85px;
 }
 * {
     margin: 0;
@@ -70,7 +70,7 @@ body {
 .nav_container {
     justify-content: space-evenly;
     align-items: center;
-    height: var(--height-navbar);
+    height: 100%;
     flex: 1;
 }
 .nav_container:nth-child(1) {
@@ -81,10 +81,14 @@ body {
     font-size: 1.1em;
     cursor: pointer;
     padding: 5px 15px;
+    transition: 0.8s;
 }
+.nav_item:hover {  color: white;  }
 .nav_header {
     font-size: 1.5em;
     font-weight: 500;
+    margin-left: 10%;
+    color: var(--color-reverse);
 }
 .nav_item::before {
     content: "";
@@ -95,12 +99,11 @@ body {
     top: 0;
     transform: scaleX(0);
     background: var(--color-first);
-    z-index: -1;
+    z-index: -2;
     transition: transform 0.5s;
+    border-radius: 15px;
 }
-.nav_item:hover::before {
-    transform: scaleX(1);
-}
+.nav_item:hover::before {  transform: scaleX(1);  }
 .nav_item::after {
     content: "";
     position: absolute;
@@ -109,10 +112,11 @@ body {
     bottom: 0;
     top: 0;
     transform: scaleX(0);
-    background: var(--color-third);
-    z-index: 1;
+    background: var(--color-second);
+    z-index: -1;
     transition: transform 0.5s;
-    transition-delay: 2s;
+    transition-delay: 0.25s;
+    border-radius: 15px;
 }
 .nav_item:hover::after {
     transform: scaleX(1);
@@ -120,6 +124,24 @@ body {
 .nav_icon {
     cursor: pointer;
     color: var(--color-reverse);
+    font-size: 28px !important;
+}
+
+.hamburger_container {
+    flex: 0.2;
+}
+.hamburger {
+    display: none;
+    height: 25px;
+    width: 30px;
+    cursor: pointer;
+    margin-top: -6px;
+}
+.hamburger_line {
+    height: 2px;
+    width: 30px;
+    margin: 6px 0px;
+    background: var(--color-reverse);
 }
 
 
@@ -200,8 +222,6 @@ body {
     color: var(--color-first);
     font-size: 1.2em;
 }
-
-
 .hamburger_2 {
     position: absolute;
     top: 0;

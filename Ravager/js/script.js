@@ -1,6 +1,19 @@
+
+//IMPLEMENTING COOKIES
+Cookies.set("mode", "false", {expires: 7});
+var mode = Cookies.get("mode");
 const nav_icon = document.querySelector(".nav_icon");
 
 nav_icon.onclick = function() {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+        nav_icon.innerHTML = "light_mode";
+    } else {
+        nav_icon.innerHTML = "dark_mode";
+    }
+}
+function darkMode(mode) {
     document.body.classList.toggle("dark");
 
     if (document.body.classList.contains("dark")) {
