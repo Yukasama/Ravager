@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravager</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="png" href="img/Pageicon_1.png">
+    <script src="https://kit.fontawesome.com/04b8e834da.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <div class="navbar flex">
+        <div class="nav_container flex">
+            <p class="nav_header">Ravager</p>
+        </div>
+        <div class="nav_container flex">
+            <a class="nav_item">Home</a>
+            <a href="products.html" class="nav_item">Products</a>
+            <a class="nav_item" id="contact">Contact</a>
+        </div>
+        <div class="nav_container hamburger_container flex">
+            <i class="nav_icon material-icons">dark_mode</i>
+            <div class="hamburger">
+                <div class="hamburger_line"></div>
+                <div class="hamburger_line"></div>
+                <div class="hamburger_line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact flex">
+        <div class="contact_page contact_page1 flex">
+            <div class="circle circle1"></div>
+            <div class="contacting flex">
+                <i class="material-icons contact_icon">location_on</i>
+                <div class="info_contact">
+                    <p class="contact_header">Address</p>
+                    <p class="contact_text">Funny Street</p>
+                    <p class="contact_text">Chicago, Illinois</p>
+                    <p class="contact_text">60007</p>
+                </div>
+            </div>
+            <div class="contacting flex">
+                <i class="material-icons contact_icon">local_phone</i>
+                <div class="info_contact">
+                    <p class="contact_header">Phone</p>
+                    <p class="contact_text">+49 911 420 69</p>
+                </div>
+            </div>
+            <div class="contacting flex">
+                <i class="material-icons contact_icon">mail</i>
+                <div class="info_contact">
+                    <p class="contact_header">E-Mail</p>
+                    <p class="contact_text">info@oblivion</p>
+                </div>
+            </div>
+        </div>
+        <div class="contact_page contact_page2 flex">
+            <div class="circle circle2"></div>
+            <div class="hamburger hamburger_2">
+                <div class="hamburger_line hamburger_line2"></div>
+                <div class="hamburger_line hamburger_line2"></div>
+                <div class="hamburger_line hamburger_line2"></div>
+            </div>
+            <p class="contact_header">Let's talk!</p>
+            <div class="contactInfo flex">            
+                <div class="contactBox">
+                    <input type="text" name="" required="required">
+                    <span>First Name</span>
+                </div>
+                <div class="contactBox">
+                    <input type="text" name="name" required="required">
+                    <span>Last Name</span>
+                </div>
+            </div>
+            <div class="contactBox">
+                <input type="email" name="email" required="required">
+                <span>E-Mail</span>
+            </div>
+            <div class="contactBox">
+                <textarea type="text" value="message" required="required"></textarea>
+                <span>Enter your Message...</span>
+            </div>
+            <div class="smart_button contact_button" type="submit">Submit</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

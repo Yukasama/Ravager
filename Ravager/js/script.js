@@ -5,16 +5,21 @@ var mode = Cookies.get("mode");
 const nav_icon = document.querySelector(".nav_icon");
 
 nav_icon.onclick = function() {
-    document.body.classList.toggle("dark");
-
-    if (document.body.classList.contains("dark")) {
-        nav_icon.innerHTML = "light_mode";
-    } else {
-        nav_icon.innerHTML = "dark_mode";
+    if (mode == "false") {
+        mode = "true";
+        darkMode(mode);
+    }
+    else {
+        mode = "false";
+        darkMode(mode);
     }
 }
 function darkMode(mode) {
-    document.body.classList.toggle("dark");
+    if (mode == "true") {
+        document.body.classList.add("dark");
+    } else if (mode == "false") {
+        document.body.classList.remove("dark");
+    }
 
     if (document.body.classList.contains("dark")) {
         nav_icon.innerHTML = "light_mode";
