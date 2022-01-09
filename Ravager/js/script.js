@@ -1,5 +1,5 @@
 
-//IMPLEMENTING COOKIES
+//IMPLEMENTING COOKIES -> DARKMODE
 Cookies.set("mode", "false", {expires: 7});
 var mode = Cookies.get("mode");
 const nav_icon = document.querySelector(".nav_icon");
@@ -29,31 +29,32 @@ function darkMode(mode) {
 }
 
 
-const contact = document.querySelector("#contact");
+//CONTACT PAGE
+const contact = document.querySelector(".contactshowup");
 const contact_page1 = document.querySelector(".contact_page1");
 const contact_page2 = document.querySelector(".contact_page2");
-const circle1 = document.querySelector(".circle1");
-const circle2 = document.querySelector(".circle2");
-const contact_button = document.querySelector(".contact_button");
 contact.onclick = function() {
     contact_page1.classList.toggle("swoosh");
     contact_page2.classList.toggle("swoosh");
-    circle1.classList.toggle("swoosh");
-    circle2.classList.toggle("swoosh");
-    contact_button.classList.toggle("swoosh");
 }
-
-
 const hamburger2 = document.querySelector(".hamburger_2");
 hamburger2.onclick = function() {
     contact_page1.classList.remove("swoosh");
     contact_page2.classList.remove("swoosh");
-    circle1.classList.remove("swoosh");   
-    circle2.classList.remove("swoosh");
-    contact_button.classList.remove("swoosh");
 }
 
-var navbar = document.querySelector(".navbar");
+
+//STICKY NAVBAR
+const navbar = document.querySelector(".navbar");
 window.addEventListener("scroll", function() {
     navbar.classList.toggle("scroll", window.scrollY > 50);
 })
+
+
+//RESPONSIVE NAVBAR
+const hamburger = document.querySelector(".hamburger");
+const nav_hidden = document.querySelector(".nav_container_hidden");
+hamburger.onclick = function() {
+    hamburger.classList.toggle("show");
+    nav_hidden.classList.toggle("show");
+}

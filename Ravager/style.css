@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Spectral&display=swap');
 
 :root {
+    --color-theme: white;
+    --color-reverse: black;
+    --color-reverse-light: rgb(31, 31, 31);
+    --color-blur: rgba(255,255,255,0.6);
+
     --color-first: rgb(19, 98, 218);
     --color-second: rgb(2, 184, 93);
     --color-third: rgb(156, 14, 221);
-
-    --color-theme: white;
-    --color-reverse: black;
+    --color-rainbow: linear-gradient(red, yellow, green, blue, purple, pink);
 
     --height-navbar: 90px;
-    --height-navbar-scroll: 85px;
+    --height-navbar-scroll: 80px;
+    --height-footer: 70vh;
 }
 * {
     margin: 0;
@@ -24,10 +28,13 @@
 
     transition: 0.275s;
     scroll-behavior: smooth;
+    border: red 1px solid;
 }
 .dark {
     --color-theme: black;
     --color-reverse: white;
+    --color-reverse-light: rgb(202, 202, 202);
+    --color-blur: rgba(0,0,0,0.6);
 }
 body {
     min-height: 0;
@@ -45,6 +52,9 @@ body {
         transform: translate(0, 0);       
     }
 }
+::-webkit-scrollbar {  width: 10px;  }
+::-webkit-scrollbar-thumb {  background-color: var(--color-first);  }
+
 .flex {  display: flex;  }
 .smart_button {
     display: flex;
@@ -55,7 +65,20 @@ body {
     cursor: pointer;
     color: white;
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: 0.3s;
 }
+.effect::before, .effect::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+
 
 .navbar {
     position: fixed;
@@ -73,9 +96,7 @@ body {
     height: 100%;
     flex: 1;
 }
-.nav_container:nth-child(1) {
-    justify-content: flex-start;
-}
+.nav_container:nth-child(1) {  justify-content: flex-start;  }
 .nav_item {
     color: var(--color-reverse);
     font-size: 1.1em;
@@ -91,35 +112,23 @@ body {
     color: var(--color-reverse);
 }
 .nav_item::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    transform: scaleX(0);
     background: var(--color-first);
     z-index: -2;
-    transition: transform 0.5s;
     border-radius: 15px;
 }
-.nav_item:hover::before {  transform: scaleX(1);  }
 .nav_item::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    transform: scaleX(0);
     background: var(--color-third);
     z-index: -1;
-    transition: transform 0.5s;
     transition-delay: 0.25s;
     border-radius: 15px;
 }
-.nav_item:hover::after {
-    transform: scaleX(1);
+.nav_item:hover::before, .nav_item:hover::after {  transform: scaleX(1);  }
+#login {
+    background: linear-gradient(to right, var(--color-first), var(--color-third));
+    background-size: 200%;
+}
+#login:hover {
+    background-position: right;
 }
 .nav_icon {
     cursor: pointer;
@@ -127,9 +136,7 @@ body {
     font-size: 28px !important;
 }
 
-.hamburger_container {
-    flex: 0.2;
-}
+.hamburger_container {  flex: 0.2;  }
 .hamburger {
     display: none;
     height: 25px;
@@ -143,6 +150,46 @@ body {
     margin: 6px 0px;
     background: var(--color-reverse);
 }
+.hamburger.show .hamburger_line:nth-child(1), .hamburger_line2:nth-child(1) {  transform: translate(0, 8px) rotate(45deg);  }
+.hamburger.show .hamburger_line:nth-child(2), .hamburger_line2:nth-child(2) {  background: transparent;  }
+.hamburger.show .hamburger_line:nth-child(3), .hamburger_line2:nth-child(3) {  transform: translate(0, -8px) rotate(-45deg);  }
+
+.nav_container_hidden {
+    top: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+    clip-path: inset(100% 40%);
+    transition: all 0.75s ease-out;
+    background: var(--color-blur);
+    backdrop-filter: blur(10px);
+}
+.nav_container_hidden.show {  display: flex; clip-path: inset(0 0);  }
+.nav_item_hidden {
+    font-size: 1.2em;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.nav_item_hidden::before {
+    background: var(--color-first);
+    height: 5px;
+}
+.nav_item_hidden:hover::before {  transform: scaleX(1);  }
+.nav_container_hidden.show {
+    display: flex;
+}
+.navbar.scroll {
+    top: 0;
+    height: var(--height-navbar-scroll);
+    background: var(--color-blur);
+    backdrop-filter: blur(3px);
+}
+
 
 
 .contact {
@@ -166,19 +213,15 @@ body {
     box-shadow: 0 0 30px 1px var(--color-blur);
 }
 .contact_page1 {
-    transform: translate(-1200px, 0);
+    transform: translate(-1100px, 0);
     margin: 110px 0 0 20%;
-}
-.contact_page2 {
-    transform: translate(1200px, 0);
-    margin: 110px 0 0 50%;
-}
-.contact_page1.swoosh {
-    transform: translate(0px, 0px);
-    background: var(--color-theme);
     border-right: 1px var(--color-reverse) solid;
 }
-.contact_page2.swoosh {
+.contact_page2 {
+    transform: translate(1100px, 0);
+    margin: 110px 0 0 50%;
+}
+.contact_page1.swoosh, .contact_page2.swoosh {
     transform: translate(0px, 0px);
     background: var(--color-theme);
 }
@@ -188,7 +231,6 @@ body {
     width: 350px;
     border-radius: 50%;
     background: var(--color-first);
-    display: none;
 }
 .circle1 {
     top: -170px;
@@ -197,20 +239,13 @@ body {
 .circle2 {
     bottom: -100px;
     right: -120px;
-    height: 350px;
-    width: 350px;
     background: var(--color-third);
 }
-.circle1.swoosh {  display: block;  }
-.circle2.swoosh {  display: block;  }
-
 .contacting {
     justify-content: space-evenly;
     align-items: center;
-    width: 80%;
-    display: none;
+    width: 70%;
 }
-.contact_page1.swoosh .contacting {  display: flex;  }
 .contact_icon {
     font-size: 4em !important;
     padding: 20px;
@@ -220,27 +255,20 @@ body {
 }
 .contact_header {
     color: var(--color-first);
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 .hamburger_2 {
     position: absolute;
     top: 0;
     right: 0;
     display: block;
-    padding: 20px;
+    height: 40px;
+    width: 40px;
+    padding: 10px 0;
 }
-.hamburger_line2 {
-    display: block;
-    background: var(--color-reverse);
-}
-.hamburger_line2:nth-child(1) {  transform: translate(0, 8px) rotate(45deg);  }
-.hamburger_line2:nth-child(2) {  background: transparent;  }
-.hamburger_line2:nth-child(3) {  transform: translate(0, -8px) rotate(-45deg);  }
+.hamburger_line2 {  background: var(--color-reverse);  }
 
-.contactBox {
-    margin: 10px;
-    display: none;
-}
+.contactBox {  margin: 10px;  }
 .contactBox input, .contactBox textarea {
     width: 100%;
     padding: 5px 0;
@@ -252,7 +280,6 @@ body {
     background: transparent;
     color: var(--color-reverse);
 }
-.contact_page2.swoosh .contactBox {  display: block;  }
 .contactBox input:focus, .contactBox textarea:focus,
 .contactBox input:valid, .contactBox textarea:valid {
     border-bottom: 2px solid var(--color-first);  
@@ -275,43 +302,20 @@ body {
 .contact_button {
     background: linear-gradient(to right, var(--color-third), var(--color-second), var(--color-first));
     background-size: 400%;
-    display: none;
     transition: background 0.6s;
 }
 .contact_button:hover {  background-position: right;  }
-.contact_button.swoosh {  display: block;  }
 
-.home {
-    width: 50%;
-    background: red;
-    height: 100px;
-    margin-top: 200px;
-    font-size: 3em;
-    color: var(--color-reverse);
-    box-shadow: 100px 100px 100px 100px red;
-    animation: moving 5s infinite linear alternate;
-}
-@keyframes moving {
-    100% {
-        margin-left: 50%;
-        transform: rotate(720deg);
-        background: purple;
-        box-shadow: 100px 100px 100px 100px orange;
+
+
+@media screen and (max-width: 1200px) {
+    .nav_item {  display: none;  }
+    .hamburger {
+        display: block;
+        z-index: 2000;
     }
-    80% {
-        background: blue;
-        box-shadow: 100px 100px 100px 100px yellow;
-    }
-    60% {
-        background: green;
-        box-shadow: 100px 100px 100px 100px green;
-    }
-    40% {
-        background: yellow;
-        box-shadow: 100px 100px 100px 100px blue;
-    }
-    20% {
-        background: orange;
-        box-shadow: 100px 100px 100px 100px purple;
-    }
+
+    .contact_page1 {  display: none;  }
+    .contact_page2 {  margin: 110px 10%;  }
+    .contactInfo {  flex-direction: column;  }
 }

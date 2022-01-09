@@ -1,33 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!-- MODIFY -->
+    <title>Ravager</title> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="png" href="img/Pageicon_1.png">
+
+    <!-- IMPLEMENTATIONS OF FORMATS, ICONS -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" content="600">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ravager</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="icon" type="png" href="img/Pageicon_1.png">
     <script src="https://kit.fontawesome.com/04b8e834da.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
+
     <!-- NAVBAR -->
     <div class="navbar flex">
         <div class="nav_container flex">
-            <p class="nav_header">Ravager</p>
+            <p class="nav_header">Template</p>
         </div>
         <div class="nav_container flex">
-            <a class="nav_item">Home</a>
-            <a href="products.html" class="nav_item">Products</a>
-            <a class="nav_item" id="contact">Contact</a>
-        </div>
-        <div class="nav_container hamburger_container flex">
+            <a href="index.html" class="nav_item effect">Home</a>
+            <a href="products.html" class="nav_item effect">Products</a>
+            <a class="nav_item effect contactshowup">Contact</a>
+            <a class="smart_button" id="login">Login</a>
             <i class="nav_icon material-icons">dark_mode</i>
             <div class="hamburger">
                 <div class="hamburger_line"></div>
                 <div class="hamburger_line"></div>
                 <div class="hamburger_line"></div>
             </div>
+        </div>
+        <div class="nav_container_hidden flex">
+            <a href="index.html" class="nav_item_hidden effect">Home</a>
+            <a href="products.html" class="nav_item_hidden effect">Products</a>
+            <a class="nav_item_hidden effect contactshowup">Contact</a>           
         </div>
     </div>
 
@@ -69,16 +80,16 @@
             <p class="contact_header">Let's talk!</p>
             <div class="contactInfo flex">            
                 <div class="contactBox">
-                    <input type="text" name="" required="required">
+                    <input type="text" required="required">
                     <span>First Name</span>
                 </div>
                 <div class="contactBox">
-                    <input type="text" name="name" required="required">
+                    <input type="text" required="required">
                     <span>Last Name</span>
                 </div>
             </div>
             <div class="contactBox">
-                <input type="email" name="email" required="required">
+                <input type="text" required="required">
                 <span>E-Mail</span>
             </div>
             <div class="contactBox">
