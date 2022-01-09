@@ -30,10 +30,15 @@ function darkMode(mode) {
 
 
 //CONTACT PAGE
-const contact = document.querySelector(".contactshowup");
+const contact = document.querySelector("#contact");
+const contactx2 = document.querySelector("#contactx2");
 const contact_page1 = document.querySelector(".contact_page1");
 const contact_page2 = document.querySelector(".contact_page2");
 contact.onclick = function() {
+    contact_page1.classList.toggle("swoosh");
+    contact_page2.classList.toggle("swoosh");
+}
+contactx2.onclick = function() {
     contact_page1.classList.toggle("swoosh");
     contact_page2.classList.toggle("swoosh");
 }
@@ -57,4 +62,8 @@ const nav_hidden = document.querySelector(".nav_container_hidden");
 hamburger.onclick = function() {
     hamburger.classList.toggle("show");
     nav_hidden.classList.toggle("show");
+
+    if (hamburger.classList.contains("show")) {
+        document.body.style.overflowY = "hidden";
+    } else {  document.body.style.overflowY = "scroll";  }
 }
