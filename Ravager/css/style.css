@@ -62,7 +62,7 @@ body {
     border-radius: 10px;
     font-size: var(--font-size-navbar);
     color: white;
-    transition: 0.3s;
+    transition: 0.6s;
     cursor: pointer;
     display: flex;
     justify-content: center;
