@@ -301,7 +301,7 @@ body {
         position: fixed;
         flex-direction: column;
         width: 100vw;
-        height: 60vh;
+        height: 30vh;
         justify-content: space-evenly;
         align-items: center;
         transform: translateX(1500px);
