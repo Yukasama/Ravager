@@ -16,7 +16,10 @@
     <meta http-equiv="refresh" content="100000">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Example: <i class="material-icons">eg. school</i> -->    
+
     <script src="https://kit.fontawesome.com/04b8e834da.js" crossorigin="anonymous"></script>
+        <!-- Example: <i class="fa-regular fa-square"></i> --> 
 
 </head>
 <body>
@@ -28,10 +31,10 @@
             <a href="index.html" class="nav_header">Ravager</a>
         </div>
         <div class="nav_container flex">
-            <a href="index.html" class="nav_item effect">Home</a>
+            <a href="index.html" class="nav_item nav_active effect">Home</a>
             <a href="products.html" class="nav_item effect">Products</a>
             <a class="nav_item effect" id="contact">Contact</a>
-            <a class="smart_button login_button">Login</a>
+            <a class="smart_button_outline login_button">Login</a>
             <i class="nav_icon material-icons">dark_mode</i>
             <div class="hamburger">
                 <div class="hamburger_line"></div>
@@ -40,14 +43,14 @@
             </div>
         </div>
         <div class="nav_container_hidden flex">
-            <a href="index.html" class="nav_item_hidden effect">Home</a>
-            <a href="products.html" class="nav_item_hidden effect">Products</a>
-            <a class="nav_item_hidden effect" id="contactx2">Contact</a>           
+            <a href="index.html" class="nav_item_hidden nav_active_hidden effect_underline">Home</a>
+            <a href="products.html" class="nav_item_hidden effect_underline">Products</a>
+            <a class="nav_item_hidden effect_underline" id="contactx2">Contact</a>           
         </div>
     </div>
 
     <!-- CONTACT -->
-    <div class="contact flex">
+    <form action="../php/logic.php" method="post" class="contact flex">
         <div class="contact_page contact_page1 flex">
             <div class="circle circle1"></div>
             <div class="contacting flex">
@@ -70,7 +73,7 @@
                 <i class="material-icons contact_icon">mail</i>
                 <div class="info_contact">
                     <p class="contact_header">E-Mail</p>
-                    <p class="contact_text">info@ravager</p>
+                    <p class="contact_text">info.ravager@gmail.com</p>
                 </div>
             </div>
         </div>
@@ -84,28 +87,78 @@
             <p class="contact_header">Let's talk!</p>
             <div class="contactInfo flex">            
                 <div class="contactBox">
-                    <input type="text" required="required">
+                    <input type="text" name="firstname" required="required">
                     <span>First Name</span>
                 </div>
                 <div class="contactBox">
-                    <input type="text" required="required">
+                    <input type="text" name="lastname" required="required">
                     <span>Last Name</span>
                 </div>
             </div>
             <div class="contactBox">
-                <input type="text" required="required">
-                <span>E-Mail</span>
+                <input type="text" name="mail" required="required">
+                <span>E-mail</span>
             </div>
             <div class="contactBox">
-                <textarea type="text" value="message" required="required"></textarea>
-                <span>Enter your Message...</span>
+                <input type="text" name="subject" required="required">
+                <span>Subject</span>
             </div>
-            <div class="smart_button contact_button" type="submit">Submit</div>
+            <div class="contactBox">
+                <textarea type="text" name="message" required="required"></textarea>
+                <span>Enter Message...</span>
+            </div>
+            <div class="smart_button contact_button" name="submit" type="submit">Submit</div>
         </div>
+    </form>
+
+    <!-- HOME -->
+    <div class="home flex">
+        <div class="home_container">Create your elements here.</div>
     </div>
+
 
     <!-- JAVASCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+        <!-- USED FOR COOKIES -->
+
     <script src="../js/script.js"></script>
+    <script src="../js/vanilla-tilt.js"></script>
+    <script>
+
+        //VANILLA TILT SETTINGS
+        VanillaTilt.init(document.querySelectorAll(".your_element"), {
+            max: 25,
+            speed: 400,
+            scale: 1.07,
+        });
+
+        //ELEMENT SLIDING
+        const slideOptions = {
+            threshhold: 0,
+            rootMargin: "0px 0px -300px 0px"
+        };
+        const your_element = document.querySelectorAll(".your_element");
+        const slideOnScroll = new IntersectionObserver(function(
+            entries,
+            slideOnScroll
+        ) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+                else {
+                    entry.target.classList.add("slide");
+                    slideOnScroll.unobserve(entry.target);
+                }
+            })
+        
+        }, slideOptions);
+    
+        //ENTER YOUR ELEMENT
+        your_element.forEach(element => {
+            slideOnScroll.observe(element);
+        });
+
+    </script>
 </body>
 </html>

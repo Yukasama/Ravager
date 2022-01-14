@@ -40,6 +40,8 @@
     font-family: "Poppins", sans-serif;
     transition: 0.275s;
     scroll-behavior: smooth;
+
+    color: var(--color-reverse);
     /* border: red 1px solid; */
 }
 body {
@@ -75,13 +77,12 @@ body {
 }
 .nav_container:nth-child(1) {  justify-content: flex-start;  }
 .nav_item {
-    color: var(--color-reverse);
     font-size: var(--font-size-navbar);
     cursor: pointer;
     padding: 5px 10px;
     transition: 0.8s;
 }
-.nav_item:hover {  color: white;  }
+.nav_item:hover, .nav_active {  color: white;  }
 .nav_header {
     font-size: var(--font-size-header);
     margin: 0 0 0 10px;
@@ -111,17 +112,13 @@ body {
     z-index: -1;
     transition-delay: 0.25s;
 }
-.nav_item:hover::before, .nav_item:hover::after {  transform: scaleX(1);  }
+.nav_item:hover::before, .nav_item:hover::after, .nav_active::after {  transform: scaleX(1);  }
 .login_button {
-    background: linear-gradient(to right, var(--color-first), var(--color-third), var(--color-first));
-    background-size: 200%;
-    transition: background 0.6s;
-    border-radius: 20px;
+    border-radius: 50px;
 }
 .login_button:hover {  background-position: right;  }
 .nav_icon {
     cursor: pointer;
-    color: var(--color-reverse);
     font-size: 28px !important;
 }
 
@@ -167,7 +164,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    color: var(--color-reverse);
     overflow: hidden;
     min-height: 500px;
     z-index: 500;
@@ -177,6 +173,7 @@ body {
     transform: translate(-1100px, 0);
     margin: 110px 0 0 20%;
     border-right: 1px var(--color-reverse) solid;
+    align-items: flex-start;
 }
 .contact_page2 {
     transform: translate(1100px, 0);
@@ -186,30 +183,24 @@ body {
     transform: translate(0px, 0px);
     background: var(--color-theme);
 }
-.circle {
-    position: absolute;
-    height: 350px;
-    width: 350px;
-    border-radius: 50%;
-    background: var(--color-first);
-}
 .circle1 {
     top: -170px;
     left: -150px;
 }
 .circle2 {
-    bottom: -100px;
-    right: -120px;
+    bottom: -140px;
+    right: -160px;
     background: var(--color-third);
 }
 .contacting {
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
     width: 70%;
 }
 .contact_icon {
     font-size: 4em !important;
     padding: 20px;
+    margin: 20px 40px 20px 30%;
     border-radius: 50%;
     background: var(--color-reverse);
     color: var(--color-theme);
@@ -239,7 +230,6 @@ body {
     outline: none;
     resize: none;
     background: transparent;
-    color: var(--color-reverse);
 }
 .contactBox input:focus, .contactBox textarea:focus,
 .contactBox input:valid, .contactBox textarea:valid {
@@ -263,9 +253,7 @@ body {
 .contact_button {
     background: linear-gradient(to right, var(--color-third), var(--color-second), var(--color-first));
     background-size: 400%;
-    transition: background 0.6s;
 }
-.contact_button:hover {  background-position: right;  }
 
 
 
@@ -276,28 +264,26 @@ body {
         position: fixed;
         flex-direction: column;
         width: 100vw;
-        height: 30vh;
+        height: 40vh;
         justify-content: space-evenly;
         align-items: center;
-        transform: translateX(1500px);
+        transform: translateX(1000px);
         display: flex;
         background: var(--color-blur);
         backdrop-filter: blur(10px);
-        transition: transform 0.75s ease-out;
+        transition: transform 0.75s ease-out, opacity 0.5s;
     }
     .nav_container_hidden.show {  transform: translateX(0);  }
     .nav_item_hidden {
         font-size: 1.2em;
         padding: 5px 10px;
         cursor: pointer;
-        color: var(--color-reverse);
     }
     .nav_item_hidden::before {
         background: var(--color-first);
-        height: 2px;
         transform-origin: left;
     }
-    .nav_item_hidden:hover::before {  transform: scaleX(1);  }
+    .nav_item_hidden:hover::before, .nav_active_hidden::before {  transform: scaleX(1);  }
     .hamburger {
         display: block;
         z-index: 2000;

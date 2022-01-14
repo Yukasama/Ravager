@@ -1,11 +1,38 @@
+
+/*
+
+HOW TO USE CLASSES?
+Enter pre-defined classes as an additional class in your html element.
+
+    -->  <div class="div smart_button"></div>
+
+
+OVERVIEW OF EXISTING CLASSES
+
+    - flex:                   sets "display: flex" to an element, mainly for space efficiency.
+
+    - smart_button:           contains many useful properties of a fancy, hoverable button.
+
+    - smart_button_outline:   same as smart_button, but with a outline design.
+
+    - effect:                 add pseudo element in css-file (eg. element::before), then define color.
+
+    - effect_underline:       same as effect, but with a underline hover-animation.
+
+    - circle:                 predefined circle, mainly for space efficiency.
+
+*/
+
+
+
 .flex {  display: flex;  }
 
-.smart_button {
+.smart_button, .smart_button_outline {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 20px;
-    border-radius: 10px;
+    padding: 10px 23px;
+    border-radius: 15px;
 
     color: white;
     font-size: var(--font-size-navbar);
@@ -16,13 +43,25 @@
     background-size: 200%;
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 
-    transition: 0.6s;
+    transition: 0.8s, padding 0s, border 0s;
     cursor: pointer;
 }
-
-.smart_button:hover {
-    background-position: right;
+.smart_button_outline {
+    background: linear-gradient(to right, 
+        var(--color-theme) 50%, 
+        var(--color-third), 
+        var(--color-first));
+    background-size: 400%;
+    color: var(--color-reverse);
+    border: 2.5px solid var(--color-reverse);
 }
+.smart_button:hover, .smart_button_outline:hover {  background-position: right;  }
+.smart_button_outline:hover {
+    border: transparent;
+    color: white;
+    padding: 12.5px 25.5px;
+}
+
 
 
 .effect::before, .effect::after {
@@ -50,4 +89,14 @@
 .effect:hover::before, .effect:hover::after, 
 .effect_underline:hover::before, .effect_underline:hover::after {
     transform: scaleX(1);
+}
+
+
+
+.circle {
+    position: absolute;
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    background: var(--color-first);
 }

@@ -67,3 +67,30 @@ hamburger.onclick = function() {
         document.body.style.overflowY = "hidden";
     } else {  document.body.style.overflowY = "scroll";  }
 }
+
+
+//BUTTON CLICK WEBSITE SCROLL
+const main_icon = document.querySelector(".main_wave_icon");
+main_icon.onclick = function() {
+    window.style.transform = translateY( + window.scrollY + 1000);
+};
+
+
+//AUTOMATIC WRITING FUNCTION (use it when needed)
+const writer = document.querySelector(".main_writer");
+function writing() {
+    setTimeout(() => {
+        writer.innerHTML = "Ethereum";
+    }, 0000);
+    setTimeout(() => {
+        writer.innerHTML = "Avalanche";
+    }, 4000);
+    setTimeout(() => {
+        writer.innerHTML = "Solana";
+    }, 8000);
+    setTimeout(() => {
+        writer.innerHTML = "Polkadot";
+    }, 12000);
+}
+setInterval(writing, 16000);
+writing();
