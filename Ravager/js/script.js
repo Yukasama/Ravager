@@ -69,28 +69,31 @@ hamburger.onclick = function() {
 }
 
 
-//BUTTON CLICK WEBSITE SCROLL
-const main_icon = document.querySelector(".main_wave_icon");
-main_icon.onclick = function() {
-    window.style.transform = translateY( + window.scrollY + 1000);
-};
 
+// Functions you might need down the road //
 
-//AUTOMATIC WRITING FUNCTION (use it when needed)
+//AUTOMATIC REPLACING FUNCTION (use it when needed)
 const writer = document.querySelector(".main_writer");
 function writing() {
     setTimeout(() => {
-        writer.innerHTML = "Ethereum";
+        writer.innerHTML = "Elements";
     }, 0000);
     setTimeout(() => {
-        writer.innerHTML = "Avalanche";
-    }, 4000);
+        writer.innerHTML = "Containers";
+    }, 4000);   //Time when item gets replaced
     setTimeout(() => {
-        writer.innerHTML = "Solana";
+        writer.innerHTML = "Wrappers";
     }, 8000);
     setTimeout(() => {
-        writer.innerHTML = "Polkadot";
+        writer.innerHTML = "Vision";
     }, 12000);
 }
 setInterval(writing, 16000);
 writing();
+
+
+//BUTTON CLICK FOR WEBSITE SCROLL
+const main_icon = document.querySelector(".main_wave_icon");
+main_icon.onclick = function() {
+    window.style.transform = translateY( + window.scrollY + 1000);
+};
