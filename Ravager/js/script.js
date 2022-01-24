@@ -120,6 +120,24 @@ side_item4.onclick = function() {
 }
 
 
+//WEBSITE STYLE CHANGE
+const main = document.querySelector(".main");
+const home = document.querySelector(".home");
+const side_icon_design = document.querySelector(".side_icon_design");
+side_icon_design.onclick = function() {
+
+    if(main.classList.contains("style")) {
+        main.classList.remove("style");
+        home.classList.add("style");
+    } else {
+        main.classList.add("style");
+        home.classList.remove("style");
+    }
+
+
+}
+
+
 //BUTTON CLICK FOR WEBSITE SCROLL
 const main_icon = document.querySelector(".main_wave_icon");
 main_icon.onclick = function() {

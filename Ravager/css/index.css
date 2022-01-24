@@ -1,0 +1,109 @@
+
+.main {
+    width: 100%;
+    height: 1200px;
+}
+.main_background {
+    position: absolute;
+    width: 115%;
+    height: 2500px;
+    background: linear-gradient(
+        to right, rgb(9, 81, 238) 35%, 
+        rgb(10, 115, 235) 35%, 
+        rgb(10, 115, 235) 60%, 
+        rgb(8, 137, 223) 60%,
+        rgb(8, 137, 223) 80%,
+        rgb(23, 185, 234)80%);
+    border-radius: 250px;
+    transform: translate(-200px, -1900px) rotate(345deg);
+}
+.main_container {
+    width: 100%;
+    height: 750px;
+    margin-left: 15%;
+    justify-content: center;
+    flex-direction: column;
+}
+.main_header {
+    color: white;
+    font-size: 3em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.main_text {
+    color: white;
+    font-weight: 350;
+    font-size: 1.1em;
+}
+.main_buttons {
+    gap: 20px;
+    align-items: center;
+}
+.main_button {
+    background: var(--color-first);
+    width: 150px;
+    margin: 25px 0;
+    border-radius: 10px;
+    font-size: 1.1em;
+    transition: background 0.7s, color 0.6s;
+    z-index: 10;
+}
+.main_icon {  margin: 0 5px 0 0;  }
+.main_button:nth-child(1) {
+    background: linear-gradient(to right, var(--color-third), var(--color-first), var(--color-third));
+    background-size: 400%;
+    padding: 12.5px 22.5px;
+}
+.main_button:nth-child(2) {
+    background: linear-gradient(to right, var(--color-theme) 50%, var(--color-first),var(--color-third));
+    background-size: 400%;
+    color: var(--color-reverse);
+    border: 2.5px solid var(--color-reverse);
+}
+.main_button:hover {  background-position: right;  }
+.main_button:nth-child(2):hover {
+    border: none;
+    color: white;
+    padding: 12.5px 22.5px;
+}
+
+.main_wrapper {
+    height: 950px;
+    width: 100%;
+    align-items: center;
+}
+.main_img {
+    height: 600px;
+    width: 400px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    align-items: center;
+}
+
+
+
+@media screen and (max-width: 1100px) {
+    .main {  flex-direction: column;  }
+    .main_container {
+        margin: 210px 0;
+        align-items: center;
+        transform: translate(0, -50px);
+    }
+    .main_header {
+        font-size: 2.5em;
+        text-align: center;
+    }
+    .main_text {
+        font-size: 1em;
+        text-align: center;
+    }
+    .main_background {  transform: translate(-200px, -1800px) rotate(345deg);  }
+    .main_wrapper {
+        margin: 0;
+        justify-content: center;
+        transform: translate(0, -220px);
+    }
+}
+
+.main.style, .home.style {
+    display: none;
+}
