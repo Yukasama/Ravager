@@ -30,7 +30,7 @@
         include "../html/fragments/navbar.php";
         include "../html/fragments/sidebar.php";
     ?>
-    
+
 
     <!-- TECHNICAL PAGE -->
     <div class="main flex">
@@ -53,7 +53,11 @@
 
     <!-- PHOTO-BASED PAGE -->
     <div class="home">
-        <p class="home_header">Lol</p>
+        <div class="home_container flex">
+            <i class="material-icons home_icon">chevron_left</i>
+            <img class="home_img" src="../img/Image2.jpeg">
+            <i class="material-icons home_icon">chevron_right</i>
+        </div>
     </div>
     
 

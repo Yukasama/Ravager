@@ -1,6 +1,6 @@
 
 <!-- CONTACT -->
-<form action="../php/logic.php" method="post" class="contact flex">
+<form action="../php/logic.php" method="POST" class="contact flex">
     <div class="contact_page contact_page1 flex">
         <div class="circle circle1"></div>
         <div class="contacting flex">
@@ -29,7 +29,7 @@
     </div>
     <div class="contact_page contact_page2 flex">
         <div class="circle circle2"></div>
-        <div class="hamburger hamburger_2">
+        <div class="hamburger_2">
             <div class="hamburger_line hamburger_line2"></div>
             <div class="hamburger_line hamburger_line2"></div>
             <div class="hamburger_line hamburger_line2"></div>
@@ -59,6 +59,6 @@
             <textarea type="text" name="message" required="required"></textarea>
             <span>Enter Message...</span>
         </div>
-        <div class="smart_button contact_button" name="submit" type="submit">Submit</div>
+        <input class="smart_button contact_button" name="submit" type="submit">
     </div>
 </form>

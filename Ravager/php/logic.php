@@ -15,5 +15,9 @@ if (isset($_POST["submit"])) {
             ".$firstname." ".$lastname.".\n\n".$message;
 
     mail($myEmail, $subject, $text, $header);
-    header("Location: index.html?mailsent");
+    header("Location: index.php?mailsent");
+
+    echo "$mail is your email";
 }
+
+?>
