@@ -55,7 +55,7 @@
     <div class="home">
         <div class="home_container flex">
             <i class="material-icons home_icon">chevron_left</i>
-            <img class="home_img" src="../img/Image2.jpeg">
+            <img class="home_img" src="../img/Image1.jpeg">
             <i class="material-icons home_icon">chevron_right</i>
         </div>
     </div>
