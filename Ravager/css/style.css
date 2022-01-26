@@ -71,7 +71,7 @@ body {
     height: var(--height-navbar);
     justify-content: space-evenly;
     align-items: center;
-    z-index: 1000;
+    z-index: 1010;
 }
 .nav_container {
     justify-content: space-evenly;
