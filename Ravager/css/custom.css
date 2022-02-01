@@ -1,7 +1,9 @@
 /* If you want to change something in style.css or classes.css,
 you can do it in here so you keep overview */
 
-.nav_container:nth-child(1):hover .nav_header {
+.nav_container:nth-child(1):hover .nav_header, .nav_item, .nav_icon {
     color: white;
 }
-.nav_item {  color: white;  }
+.navbar.scroll {
+    background: rgba(0,0,0,0.5);
+}

@@ -307,6 +307,47 @@ body {
 .side_item3.open {  transform: translate(60px, 120px);  }
 
 
+/* SETTINGS */
+.settings {
+    position: fixed;
+    z-index: 999;
+    width: 70%;
+    height: 700px;
+    margin: 200px 15% 0 15%;
+    background: var(--color-theme);
+    box-shadow: 0 10px 10px var(--color-block-shadow);
+    border-radius: 30px;
+    justify-content: space-evenly;
+    align-items: center;
+    display: none;
+}
+.settings.style {
+    display: flex;
+}
+.settings_item {
+    height: 500px;
+    width: 20%;
+    align-items: center;
+    flex-direction: column;
+}
+.settings_header {
+    font-size: var(--font-size-header);
+    margin-bottom: 50px;
+}
+.settings_subheader {
+    font-size: 1.2em;
+}
+.color_input {
+    height: 60px;
+    width: 60px;
+    margin: 0 0 20px 0;
+    outline: none;
+    border: none;
+    resize: none;
+}
+
+
+
 
 /* TABLET RESPONSIVE DESIGN */
 @media screen and (max-width: 1100px) {

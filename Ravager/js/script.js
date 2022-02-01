@@ -120,26 +120,18 @@ side_item4.onclick = function() {
 }
 
 
-//WEBSITE STYLE CHANGE
-const main = document.querySelector(".main");
-const home = document.querySelector(".home");
-const nav_item = document.querySelector(".nav_item");
+//SETTINGS
+const settings = document.querySelector(".settings");
 const side_icon_design = document.querySelector(".side_icon_design");
 side_icon_design.onclick = function() {
-
-    if(main.classList.contains("style")) {
-        main.classList.remove("style");
-        home.classList.add("style");
-        nav_item.classList.add("style");
-    } else {
-        main.classList.add("style");
-        home.classList.remove("style");
-        nav_item.classList.add("style");
-    }
-
-
+    settings.classList.toggle("style");
 }
 
+//COLOR CHANGER
+const color_input = document.querySelector(".color_input");
+color_input.addEventListener("input", function() {
+    
+})
 
 //BUTTON CLICK FOR WEBSITE SCROLL
 const main_icon = document.querySelector(".main_wave_icon");
