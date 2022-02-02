@@ -9,7 +9,7 @@ if (isset($_POST["submit"])) {
     $subject = $_POST["subject"];
     $message = $_POST["message"];
 
-    $myEmail = "youremail@random.net";  //Gmail Addresses block these type of mails
+    $myEmail = "yukasamaa@gmail.com";  //Gmail Addresses block these type of mails
     $header = "From: ".$mail;
     $text = "Received an E-mail from your Ravager Website. It was sent from
             ".$firstname." ".$lastname.".\n\n".$message;

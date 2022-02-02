@@ -61,6 +61,9 @@
     <script src="../js/vanilla-tilt.js"></script>
     <script>
 
+        dragElement(document.querySelector(".settings"));
+
+
         //VANILLA TILT SETTINGS
         VanillaTilt.init(document.querySelectorAll(".your_element"), {
             max: 25,

@@ -1,6 +1,6 @@
 
 <!-- CONTACT -->
-<form action="../php/logic.php" method="POST" class="contact flex">
+<form action="../php/logic.php" class="contact flex">
     <div class="contact_page contact_page1 flex">
         <div class="circle circle1"></div>
         <div class="contacting flex">

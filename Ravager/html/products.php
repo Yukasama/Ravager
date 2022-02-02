@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/classes.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/custom.css">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/projects.css">
     <link rel="icon" href="../img/Pageicon_1.png"> <!-- SELECT PAGEICON -->
 
     <!-- IMPLEMENTATIONS OF FORMATS, ICONS -->
@@ -30,31 +30,29 @@
         include "../html/fragments/navbar.php";
         include "../html/fragments/sidebar.php";
     ?>
-    
 
-    <!-- TECHNICAL PAGE -->
-    <div class="main flex">
-        <div class="main_background"></div>
-        <div class="main_container flex">
-            <div class="main_header">A Website that will <br>
-                help you grow.</div>
-            <div class="main_text">Are you searching for a website to boost the <br>
-            reputation of your business? Runtime will help you <br> build the
-            website of your dreams!</div>
-            <div class="main_buttons flex">
-                <div class="smart_button main_button">Get Started</div>
-                <div class="smart_button main_button">Explore</div>
+    <form class="handyshop flex" action="übungsaufgabe.php">
+        <p class="shop_header">Welcome to the HäändyShop</p>
+        <div class="productcontainer flex">
+            <div class="product">
+                <img src="../img/iPhone 13 Pro.jpeg">
+                <input class="shop_button" name="addtocart" placeholder="Add to cart">
+            </div>
+            <div class="product">
+                <img src="../img/iPhone 12 lila.jpeg">
+            </div>
+            <div class="product">
+                <img src="../img/OnePlus.jpeg">
+            </div>
+            <div class="product">
+                <img src="../img/S20.jpeg">
+            </div>
+            <div class="product">
+                <img src="../img/Google Pixel.jpeg">
             </div>
         </div>
-        <div class="main_wrapper flex">
-            <div class="main_img"></div>
-        </div>
-    </div>
-
-    <!-- PHOTO-BASED PAGE -->
-    <div class="home">
-        <p class="home_header">Lol</p>
-    </div>
+    </form>
+    
     
 
     <!-- JAVASCRIPT -->

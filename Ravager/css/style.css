@@ -309,7 +309,7 @@ body {
 
 /* SETTINGS */
 .settings {
-    position: fixed;
+    position: absolute;
     z-index: 999;
     width: 70%;
     height: 700px;
