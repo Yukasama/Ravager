@@ -61,7 +61,7 @@
     <script src="../js/vanilla-tilt.js"></script>
     <script>
 
-        dragElement(document.querySelector(".settings"));
+        //dragElement(document.querySelector(".settings"));
 
 
         //VANILLA TILT SETTINGS

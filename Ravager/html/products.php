@@ -36,7 +36,7 @@
         <div class="productcontainer flex">
             <div class="product">
                 <img src="../img/iPhone 13 Pro.jpeg">
-                <input class="shop_button" name="addtocart" placeholder="Add to cart">
+                <input class="smart_button shop_button" name="addtocart" placeholder="Add to cart">
             </div>
             <div class="product">
                 <img src="../img/iPhone 12 lila.jpeg">

@@ -24,4 +24,10 @@
     height: 400px;
     width: 200px;
 }
+.shop_button {
+    cursor: pointer;
+}
+.shop_button::placeholder {
+    color: white;
+}
 
