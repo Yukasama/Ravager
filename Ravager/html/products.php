@@ -32,23 +32,27 @@
     ?>
 
     <form class="handyshop flex" action="übungsaufgabe.php">
-        <p class="shop_header">Welcome to the HäändyShop</p>
+        <p class="shop_header">Mobile Phone Shop</p>
         <div class="productcontainer flex">
-            <div class="product">
-                <img src="../img/iPhone 13 Pro.jpeg">
-                <input class="smart_button shop_button" name="addtocart" placeholder="Add to cart">
+            <div class="product flex">
+                <img class="product_image" src="../img/iPhone 13 Pro.jpeg">
+                <button class="smart_button shop_button">Add To Cart</button>
             </div>
-            <div class="product">
-                <img src="../img/iPhone 12 lila.jpeg">
+            <div class="product flex">
+                <img class="product_image" src="../img/iPhone 12 lila.jpeg">
+                <button class="smart_button shop_button">Add To Cart</button>
             </div>
-            <div class="product">
-                <img src="../img/OnePlus.jpeg">
+            <div class="product flex">
+                <img class="product_image" src="../img/OnePlus.jpeg">
+                <button class="smart_button shop_button">Add To Cart</button>
             </div>
-            <div class="product">
-                <img src="../img/S20.jpeg">
+            <div class="product flex">
+                <img class="product_image" src="../img/S20.jpeg">
+                <button class="smart_button shop_button">Add To Cart</button>
             </div>
-            <div class="product">
-                <img src="../img/Google Pixel.jpeg">
+            <div class="product flex">
+                <img class="product_image" src="../img/Google Pixel.jpeg">
+                <button class="smart_button shop_button">Add To Cart</button>
             </div>
         </div>
     </form>
