@@ -32,7 +32,7 @@
     ?>
 
 
-    <!-- TECHNICAL PAGE -->
+    <!-- HOME PAGE -->
     <div class="main flex">
         <div class="main_background"></div>
         <div class="main_container flex">

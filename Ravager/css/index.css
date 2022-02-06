@@ -103,27 +103,3 @@
         transform: translate(0, -220px);
     }
 }
-
-.main.style, .home.style {
-    display: none;
-}
-
-
-.home_container {
-    height: 700px;
-    width: 100%;
-}
-.home_img {
-    height: 100%;
-    width: 100%;
-}
-.home_icon {
-    position: absolute;
-    font-size: 50px !important;
-    z-index: 5;
-    top: 310px;
-    left: 50px;
-}
-.home_icon:nth-child(2) {
-    right: 50px;
-}

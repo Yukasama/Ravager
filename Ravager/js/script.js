@@ -120,20 +120,6 @@ side_item4.onclick = function() {
 }
 
 
-//SETTINGS
-const settings = document.querySelector(".settings");
-const side_icon_design = document.querySelector(".side_icon_design");
-side_icon_design.onclick = function() {
-    settings.classList.toggle("style");
-}
-
-//COLOR CHANGER
-const color_input = document.querySelector(".color_input");
-color_input.addEventListener("input", function() {
-    
-})
-
-
 // DRAGABLE ELEMENTS
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;

@@ -6,7 +6,7 @@
     <title>Ravager - Build your website efficiently</title> <!-- SELECT PAGENAME -->
     <link rel="stylesheet" href="../css/classes.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/custom.css">
+    <!-- <link rel="stylesheet" href="../css/custom.css"> -->
     <link rel="stylesheet" href="../css/projects.css">
     <link rel="icon" href="../img/Pageicon_1.png"> <!-- SELECT PAGEICON -->
 
@@ -30,33 +30,6 @@
         include "../html/fragments/navbar.php";
         include "../html/fragments/sidebar.php";
     ?>
-
-    <form class="handyshop flex" action="übungsaufgabe.php">
-        <p class="shop_header">Mobile Phone Shop</p>
-        <div class="productcontainer flex">
-            <div class="product flex">
-                <img class="product_image" src="../img/iPhone 13 Pro.jpeg">
-                <button class="smart_button shop_button">Add To Cart</button>
-            </div>
-            <div class="product flex">
-                <img class="product_image" src="../img/iPhone 12 lila.jpeg">
-                <button class="smart_button shop_button">Add To Cart</button>
-            </div>
-            <div class="product flex">
-                <img class="product_image" src="../img/OnePlus.jpeg">
-                <button class="smart_button shop_button">Add To Cart</button>
-            </div>
-            <div class="product flex">
-                <img class="product_image" src="../img/S20.jpeg">
-                <button class="smart_button shop_button">Add To Cart</button>
-            </div>
-            <div class="product flex">
-                <img class="product_image" src="../img/Google Pixel.jpeg">
-                <button class="smart_button shop_button">Add To Cart</button>
-            </div>
-        </div>
-    </form>
-    
     
 
     <!-- JAVASCRIPT -->

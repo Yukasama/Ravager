@@ -19,10 +19,13 @@
 
     --height-navbar: 90px;
     --height-navbar-scroll: 80px;
+
     --font-size-navbar: 1em;
     --font-size-text: 1em;
     --font-size-header: 1.5em;
     --font-weight: 500;
+
+    --border-radius: 10px;
 }
 .dark {
     --color-theme: black;
@@ -112,7 +115,6 @@ body {
     z-index: -1;
 }
 .nav_item:hover::before, .nav_active::before {  transform: scaleX(1);  }
-.login_button {  border-radius: 50px;  }
 .login_button:hover {  background-position: right;  }
 .nav_icon {
     cursor: pointer;
@@ -208,6 +210,7 @@ body {
 }
 .hamburger_2 {
     position: absolute;
+    cursor: pointer;
     top: 0;
     right: 0;
     display: block;
